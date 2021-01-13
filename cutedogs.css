@@ -12,8 +12,23 @@ body {
 nav {
   background-color: #b9bbbe;
   color: white;
+}
+
+.nav-list {
   display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  margin-bottom: 30px;
+  list-style: none;
+}
+
+.main-image {
+  display: none;
+}
+
+.loading-dog {
+  animation: spin 1s infinite linear;
+  font-size: 50px;
+  display: none;
 }

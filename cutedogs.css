@@ -32,3 +32,26 @@ nav {
   font-size: 50px;
   display: none;
 }
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.main-image {
+  max-width: 100%;
+  max-height: 80vh;
+}
+
+@keyframes spin {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.show {
+  display: block;
+}

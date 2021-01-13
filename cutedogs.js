@@ -1,8 +1,8 @@
 // the below code is to grab all our ids so we can run the DOM
 
-const main = document.getElementById("main");
-const loader = document.getElementById("loader");
-const pickBreed = document.getElementById("breed");
+const main = document.querySelector("#main");
+const loader = document.querySelector("#loader");
+const pickBreed = document.querySelector("#breed");
 
 // now we shall write the function to interact with the dog API
 async function init() {
@@ -36,7 +36,11 @@ async function init() {
     // now to put the picture response into the img tag in the html
 
     main.src = randomResponseJson.message;
-    console.log(data);
+    
+    // now we have images of dogs present, but we need to fix the situation such that when the user selects another breed of dogs, it will give them that specific breed they want to see and to do that we have to listen for events
+
+    // add an event listener to listen for when the user selects another breed
+
 
 
 

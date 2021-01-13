@@ -14,14 +14,33 @@ async function init() {
     // now we declare a variable to be able to select an option with the DOM
     let breedOptions = "<option></option>";
 
-
+    // making the code pick out the .message and making it an object from the API response
     let breedList = Object.keys(listJson.message);
 
     for (let i = 0; i < breedList.length; i++) {
         breedOptions += `<option value = ${breedList[i]}>${breedList[i]}</option>`;
     }
 
+    // then we insert the options into the html
     pickBreed.innerHTML = breedOptions;
+
+    // now we need to get the images when we select the options and also get images when we make a change to our selection in the options
+
+    // to get our first image, we first fetch the image from the API
+
+    const randomResponse = await fetch ("https://dog.ceo/api/breeds/image/random");
+
+    // convert to json display
+    const randomResponseJson = await randomResponse.json();
+
+    // now to put the picture response into the img tag in the html
+
+    main.src = randomResponseJson.message;
+    console.log(data);
+
+
+
+
 
 
 
